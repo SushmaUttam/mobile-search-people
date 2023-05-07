@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="notch-bg">
+    <div class="notch center">
+      <div class="speaker"></div>
+      <div class="camera"></div>
+    </div>
+  </div>
+  <div class="header"><h3>Messages</h3></div>
+  <div class="search">
+    <input [(ngModel)]="searchText" type="text" class="search-box" placeholder="Search people">
+  </div>
+  <div class="list-container">
+    <div class="list" *ngFor="let item of contactList | filter: searchText">
+      {{item.name}}
+    </div>
+  </div>
+</div>
